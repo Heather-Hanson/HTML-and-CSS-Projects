@@ -1,7 +1,6 @@
 p{
-	color: purple;
-	background: pink;
+	color: pink;
 	font-size: 24px;
 	font-weight: bold;
-	text-align: right;
+	text-shadow: 2px 2px purple;
 }

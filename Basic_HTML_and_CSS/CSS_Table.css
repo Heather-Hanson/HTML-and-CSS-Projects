@@ -1,0 +1,23 @@
+body{
+	font-family: Montserrat;
+}
+h1{
+	text-align: center;
+	color: #4682B4;
+	text-decoration: underline;
+}
+table{
+	border: 2px dotted #708090;
+}
+th{
+	background-color: #708090;
+	color: white;
+}
+tr, td{
+	background-color: #F5F5F5;
+	color: #2F4F4F;
+}
+td:hover{
+	background-color: #1E90FF;
+	font-weight: bolder;
+}
