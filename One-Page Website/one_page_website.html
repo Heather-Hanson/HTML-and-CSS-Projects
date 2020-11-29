@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>The Running Enthusiast</title>
-<meta charset="utf-8">
 
 <head>
+	<title>The Running Enthusiast</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/one_page_website.css">
 </head>
 
 <body>
 	<!--NAV-->
 	<nav>
-		<a href="#About_Me">About Me</a>&nbsp;|
-		<a href="#Great_Women_Runners">Great Women Runners</a>&nbsp;|
-		<a href="#Contact">Contact Me </a>		
+		<h1>THE RUNNING ENTHUSIAST</h1>
+
+		<ul>
+			<li><a href="#About_Me">About Me</a></li>|
+			<li><a href="#Great_Women_Runners">Great Women Runners </a></li>|
+			<li><a href="#Contact">Contact Me </a></li>
+		</ul>	
 	</nav>
 	<!--END NAV-->
-	
-	<!--ABOUT ME-->
-	<section>
-		<div id="About_Me">
-		<h1>THE RUNNING ENTHUSIAST</h1>
-			<p>My name is Heather. I like to run. I actually like almost all things about running. I say all things because I'm not sure I know everything there is to know about running yet. I really enjoy learning new things about running whenever I can.</p> 
-			<p>I like to participate in races, even though I'm only really racing against myself. I like the medal you get after a race. It represents my achievement in either completing a distance, getting a personal best, or, simply, that I ran consistently enough to complete the race.</p>
-			<p>My favourite race distance right now is the 10KM. I have never done a half-marathon or a marathon. I think I may do a half marathon within the next couple of years. I don't see me ever doing a marathon, but who knows!?</p>
 
-			<p>
-				<img src="./images/BRC.png" alt="Me running 2017">&nbsp;
-				<img src="./images/HarvestValley.png" alt="My Race Buddies and Me 2019">&nbsp;
-				<img src="./images/TerryFoxRun.png" alt="Me post Terry Fox Run 2020">
-				<img src="./images/FirstRace.png" alt="My very first race!">
-			</p>
+	<!--ABOUT ME-->
+	<section id="About_Me">
+		<div class="container">
+			
+				<p class="float-left">Hello, my name is Heather and I love running! <br/> <br/>I love participating in races and running for charity. </p>
+					<div>
+						<img class="float-right" src="./images/BRC.png" alt="Me running 2017">
+						<img class="float-right"  src="./images/TerryFoxRun.png" alt="Me post Terry Fox Run 2020">
+					</div>
 		</div>
+		<div class="container">
+			
+			<p class="float-right2">Running also gives me a healthy way to spend time <br/><br/> with my friends and sisters.</p>
+				<div>
+					<img class="float-left2"  src="./images/FirstRace.png" alt="Me post Terry Fox Run 2020">
+					<img class="float-left2" src="./images/HarvestValley.png" alt="Me running 2017">
+				</div>
+	</div>
 	</section>
 	<!--END ABOUT ME-->
 	
 	<!--GREAT RUNNERS-->
-	<section>
-		<div id="Great_Women_Runners">
-			<h1>CANADIAN WOMEN RUNNERS I FOLLOW</h1>
-			<h3>Natasha Wodak</h3>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/nqWqs0V_KD8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	<!--END GREAT RUNNERS-->
-			<h3>Lanni Marchant</h3>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/JoETo8t3GgU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<h3>Rachel Cliff</h3>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/qIssFj2G5As" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<section id="Great_Women_Runners">
+		<div class="vids-container" >
+			<h2 class="vids-header">CANADIAN WOMEN RUNNERS I FOLLOW</h2>
+			<div class="vids">
+				<h3 class="tac">Natasha Wodak</h3>
+					<iframe width="400" height="215" src="https://www.youtube.com/embed/nqWqs0V_KD8"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+					<h3 class="tac">Lanni Marchant</h3>
+					<iframe width="400" height="215" src="https://www.youtube.com/embed/JoETo8t3GgU"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<br/><h3 class="tac">Rachel Cliff</h3>
+					<iframe width="400" height="215" src="https://www.youtube.com/embed/qIssFj2G5As"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
 		</div>
 	</section>
 	<!--END GREAT RUNNERS-->
 		
 	<!--CONTACT-->
-	<section>
-		<div id="Contact">
-			<h1>LET'S TALK RUNNING!</h1>
+	<section id="Contact">
+		<div >
+			<h2 class="contact-header">LET'S TALK RUNNING!</h2>
 			<h4>Please provide me with some info so we can keep the conversation going:</h4>
 			<form action="" method="post">
 				Name: <input type="text" name="Name"><br>
-				Phone:  <input type="tel" name="Phone"><br>
-				Email:  <input type="email" name="Email"><br>
+				Phone:  <input type="text" name="Phone"><br>
+				Email:  <input type="text" name="Email"><br>
 				Favourite Distance: <select id = "Distances">
+									<option hidden disabled selected value> </option>
 									<option value = "5KM">5KM</option>
 									<option value = "10KM">10KM</option>
 									<option value = "Half-Marathon">Half-Marathon</option>
@@ -69,9 +80,15 @@
 	<!--END CONTACT-->
 	
 	<!--FOOTER-->
-	<section>
-		<div>
-			<p><em>“We all know that if you run, you are pretty much choosing a life of success because of it.”</em> – Deena Kastor</p>
+	<section >
+		<div class="footer">
+			<p class="left"><em>“We all know that if you run, you are pretty much choosing a life of success because of it.”</em> – Deena Kastor 
+			<span class="social">Follow me: &nbsp;
+				<a href="https://www.instagram.com/heather_hanson_/" target="_blank" ><img src="./images/Instagram.png" alt="Instagram" width="20" height="20"></a>
+				<a href="https://www.facebook.com/heather.hanson.716" target="_blank" ><img src="./images/Facebook.png" alt="Facebook" width="20" height="20"></a>
+				<a href="https://www.pinterest.ca/hjhnsn82/_saved/" target="_blank" ><img src="./images/Pinterest.png" alt="Pinterest" width="20" height="20"></a>
+			</span>
+			</p>
 		</div>
 	</section>
 	<!--END FOOTER-->
