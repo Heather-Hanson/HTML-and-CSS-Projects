@@ -4,7 +4,11 @@
 <head>
 	<title>The Running Enthusiast</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/one_page_website.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+	<script src="JS/one_page_website.js" defer></script>
 </head>
 
 <body>
@@ -22,22 +26,74 @@
 
 	<!--ABOUT ME-->
 	<section id="About_Me">
-		<div class="container">
-			
-				<p class="float-left">Hello, my name is Heather and I love running! <br/> <br/>I love participating in races and running for charity. </p>
-					<div>
-						<img class="float-right" src="./images/BRC.png" alt="Me running 2017">
-						<img class="float-right"  src="./images/TerryFoxRun.png" alt="Me post Terry Fox Run 2020">
-					</div>
+		<h2 style="text-align: center;">Heather Hanson (The Running Enthusiast)</h2>
+		<center>
+		<p>Hello, my name is Heather and I love running! I love participating in races and running for charity. </p>
+		<p>Running also gives me a healthy way to spend time with my friends and sisters. I'm a bit of a running nerd and therefore wish to share all the things I learn about the sport.</p>
+		</center>
+
+		<div class="row">
+			<div class="column">
+				<img src="./images/TerryFoxRun.png" alt="Me post Terry Fox Run 2020" style="width: 100%;" 
+				onclick="openModal(); currentSlides(1)" class="hover-shadow cursor">
+			</div>
+			<div class="column">
+				<img src="./images/FirstRace.png" alt="My first race"style="width: 100%;" 
+				onclick="openModal(); currentSlides(2)" class="hover-shadow cursor">
+			</div>
+			<div class="column">
+				<img src="./images/Toronto2.png" alt="Me running 2017"style="width: 100%;" 
+				onclick="openModal(); currentSlides(3)" class="hover-shadow cursor">
+			</div>
+			<div class="column">
+				<img src="./images/HarvestValley.png" alt="Harvest Valley"style="width: 100%;" 
+				onclick="openModal(); currentSlides(4)" class="hover-shadow cursor">
+			</div>
 		</div>
-		<div class="container">
-			
-			<p class="float-right2">Running also gives me a healthy way to spend time <br/><br/> with my friends and sisters.</p>
-				<div>
-					<img class="float-left2"  src="./images/FirstRace.png" alt="Me post Terry Fox Run 2020">
-					<img class="float-left2" src="./images/HarvestValley.png" alt="Me running 2017">
+
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+				<div class="mySlides">
+					<div class="numbertext">1 / 4</div>
+					<img src="./images/TerryFoxRun.png" alt="Me post Terry Fox Run 2020" style="width: 100%;">
 				</div>
-	</div>
+				<div class="mySlides">
+					<div class="numbertext">2 / 4</div>
+					<img src="./images/FirstRace.png" alt="My first race"style="width: 100%;">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">3 / 4</div>
+					<img src="./images/Toronto2.png" alt="Me running 2017"style="width: 100%;" >
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">4 / 4</div>
+					<img src="./images/HarvestValley.png" alt="Harvest Valley"style="width: 100%;" >
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				<div class="caption-container">
+				<p id="caption"></p>
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="./images/TerryFoxRun.png" alt="Me (Heather) after the Virtual Terry Fox Run 2020" style="width: 100%;"
+					onclick="currentSlides(1)">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="./images/FirstRace.png" alt="My first race! My sister Rhonda (pictured) encouraged me to sign up. (CIBC Run for the Cure 2009)" style="width: 100%;" 
+					onclick="currentSlides(2)">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="./images/Toronto2.png" alt="Scotiabank Toronto Waterfront Marathon (5KM for me!) 2018" style="width: 100%;" 
+					onclick="currentSlides(3)">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="./images/HarvestValley.png" alt="Harvest Valley Marathon with my sister, Erin and BFF, Anne in 2019 (I ran the 10KM)" style="width: 100%;" 
+					onclick="currentSlides(4)">
+				</div>
+			</div>
+		</div>
 	</section>
 	<!--END ABOUT ME-->
 	

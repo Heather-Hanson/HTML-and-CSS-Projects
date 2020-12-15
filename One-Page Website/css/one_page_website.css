@@ -6,6 +6,12 @@ html{
     margin: 0;
     padding: 0;
 }
+body{
+    margin: 0px;
+}
+*{
+    box-sizing: border-box;
+}
 /*==============================================
 NAVIGATION BAR
 ==============================================*/
@@ -51,46 +57,141 @@ nav > ul > li > a{
 /*===========================================
 ABOUT ME SECTION
 ===========================================*/
+.row > .column{
+    margin: 25px;
+    margin-left: 85px;
+    padding: 10px 10px;
+}
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column{
+    float: left;
+    width: 15%;
+}
+/*=============================================+
+MODAL BACKGROUND
+===============================================*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #EDD2E0;
+}
+/*Modal Content*/
+.modal-content{
+    position: relative;
+    background: url(../images/background.png);
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 425px;
+    box-shadow: 4px 2px 8px #9A9CA2;
+    border-radius: 4px;
+    
+}
+/*The Close Button*/
+.close{
+    color: #797B84;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus{
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+.mySlides{
+    display: none;
+}
+.cursor{
+    cursor: pointer;
+}
+/*Next and Previous Buttons*/
+.prev,
+.next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+img {
+    margin-bottom: -4px;
+    box-shadow: 4px 2px 8px #9A9CA2;
+    border-radius: 4px;
+}
+.caption-container {
+    text-align: center;
+    background: url(../images/background.png);
+    padding: 2px 16px;
+    color: #5a5a5a;
+    font-family: 'Roboto-Slab';
+    font-weight: bold;
+    font-size: 16px;
+}
+.demo {
+    opacity: 0.6;
+}
+.active,
+.demo:hover {
+    opacity: 1;
+}
+img.hover-shadow {
+    transition: 0.3s;
+}
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 #About_Me{
     margin-top: 100px;
     padding: 0px 50px;  
 }
-.container{
-    clear: both;
-}
-.container p{
-    font-size: 18px;
-    font-weight: 700;
-}
-.float-left{
-    float: left;
-    padding-top: 90px;
-    padding-left: 100px;
-}
-.float-right{
-    border-radius: 10px;
-    height: 300px;
-    float: right;
-    margin: 5px 10px 25px 10px;
-    border: 20px solid #BAA1A7;
-    box-shadow: 4px 2px 8px #9A9CA2;
-}
-.float-left2{
-    border-radius: 10px;
-    height: 220px;
-    float: left;
-    margin: 40px 10px 40px 10px;
-    border: 20px solid #BAA1A7;
-    box-shadow: 4px 2px 8px #9A9CA2;
-}
-.float-right2{
-    float: right;
-    padding-top: 100px;
-    padding-left: 10px;   
-}
+
+
 /*====================================================
 WOMEN RUNNER VIDEO SECTION
 ======================================================*/
+
 .vids-header{
     text-align: left;
     font-size: 26px;
@@ -101,15 +202,21 @@ WOMEN RUNNER VIDEO SECTION
     text-decoration: underline solid;
 }
 .vids-container{
-    background: url(../images/background.png);
-    width: 100%;
     clear: both;
     padding-top: 25px;
     border-radius: 4px;
+    background: url(../images/background.png);
+
 }
 .vids{
     text-align: center;
-    padding-bottom: 25px;   
+    padding-bottom: 25px;
+/*  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin-right: 20px;*/
+
 }
 iframe{
     border: 20px solid #e2e2e2;
